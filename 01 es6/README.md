@@ -1,6 +1,6 @@
 # Basic sample
 
-It's time to test how gastby behaves when using ES6.. does it transpile it to ES5? .
+It's time to test how parcel behaves when using ES6.. does it transpile it to ES5? .
 
 # Steps to build it
 
