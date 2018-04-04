@@ -1,7 +1,6 @@
 # Basic sample
 
-Let's start with a very basic sample, just add an html plus a simple console log (E5), what you can find in the 
-getting started tutorial.
+Let's start with a very basic sample, just add an html plus a simple console log (E5), what you can find in the getting started tutorial.
 
 # Steps to build it
 

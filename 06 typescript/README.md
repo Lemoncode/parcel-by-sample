@@ -1,6 +1,6 @@
 # Basic sample
 
-It's time to test how gastby behaves when using Typescript.
+It's time to test how parcel behaves when using Typescript.
 
 # Steps to build it
 
