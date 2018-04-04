@@ -11,7 +11,7 @@ The Lemoncode Frontend Master Students are working on a review process, if you w
 
 Let's start with a very basic sample, just add an html plus a simple console log (E5), what you can find in the getting started tutorial.
 
- [Link to step by step sample guide](./00 basic)
+ [Link to step by step sample guide](https://github.com/Lemoncode/parcel-by-sample/blob/master/00%20basic/README.md)
 
 ## 01 ES6
 
