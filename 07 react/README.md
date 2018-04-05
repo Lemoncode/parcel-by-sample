@@ -12,7 +12,7 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _02 es6_, just copy the project and execute _npm install_
+- We will start from _01 es6_, just copy the project and execute _npm install_
 
 ```cmd
 npm install
@@ -24,23 +24,15 @@ npm install
 npm install react react-dom --save
 ```
 
-- Let's create a component called _hello.jsx_
-
-_./src/hello.jsx_
+- Let's create a component called **HelloComponent** in the [_hello.jsx_](src/hello.jsx) file (./src/hello.jsx)
 
 ```javascript
 import React from 'react';
 
-
-export const HelloComponent = () =>
-  <h2>Hello from React</h2>
+export const HelloComponent = () => <h2>Hello from React</h2>
 ```
 
-- Now let's create in the html a div container to instantiate our react application,
-let's move as well the scrip tag to the bottom of the body (to ensure the div root
-will be avaible when the script executes).
-
-_index.html_
+- Now let's create in the [_index.html_](src/index.html) file (./src/index.html) a div container to instantiate our react application. Let's move as well the script tag to the bottom of the body (to ensure the div root will be avaible when the script executes).
 
 ```diff
 <html>
@@ -54,9 +46,7 @@ _index.html_
 </html>
 ```
 
-- Let's create the entry point.
-
-_index.js_
+- Let's create the entry point in the [_index.js_](src/index.js) file (./src/index.js)
 
 ```diff
 +   import React from 'react';
