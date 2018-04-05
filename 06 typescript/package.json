@@ -14,6 +14,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.7.0",
     "parcel-plugin-typescript": "^0.7.0",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "rimraf": "^2.6.2"
   }
 }
