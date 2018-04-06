@@ -11,3 +11,4 @@ yarn.lock
 lib/
 es/
 package-lock.json
+.cache/

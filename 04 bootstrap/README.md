@@ -1,6 +1,6 @@
 # Import bootstrap
 
-In this demo we will install and configure webpack to import the well known
+In this demo we will install and configure parcel to import the well known
 [Bootstrap](https://getbootstrap.com/) CSS library.
 
 We will start from sample _03 SASS_.
@@ -58,7 +58,7 @@ npm install bootstrap --save
 </html>
 ```
 
-- Let's sstart the project and check that we got bootstrap styles.
+- Let's start the project and check that we got bootstrap styles.
 
 ```
 npm start
