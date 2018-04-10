@@ -73,7 +73,7 @@ console.log(`Hello from sample ${sampleNumber}`);
 
 ```
 
-- That's fine but what if we had already the image referenced inside a HTML <img> tag? Let's add [`logo_2.png`](./src/content/logo_2.png) into the index.html file:
+- That's fine but what if we had already the image referenced inside a HTML `<img>` tag? Let's add [`logo_2.png`](./src/content/logo_2.png) into the index.html file:
 
 _index.html_
 
