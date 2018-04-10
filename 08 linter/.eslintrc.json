@@ -5,5 +5,10 @@
   "env": {
     "browser": true,
     "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": 0,
+    "max-lines": ["error", 5]
   }
 }
