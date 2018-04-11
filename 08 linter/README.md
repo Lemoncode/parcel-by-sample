@@ -48,7 +48,7 @@ npm install eslint --save-dev
 
 - This is the most basic configuration, where we are using [defaults rules](http://eslint.org/docs/rules/) provided by ESLint and we are defining [browser and node environments](http://eslint.org/docs/user-guide/configuring#specifying-environments) to define `browser` related global variables like *window* object, and `node` related global variables like *require* or *__dirname*.
 
-- Let's install the parcel linter plugin.
+- Let's install the Parcel linter plugin.
 
 ```bash
 npm install parcel-plugin-eslint --save-dev
@@ -88,7 +88,7 @@ npm install babel-eslint --save-dev
 }
 ```
 
-- Now, we can see that we have an eslint error `console.log` inside index.js file. We need to configure eslint to disable this rule.
+- Now, we can see that we have an ESLint error `console.log` inside index.js file. We need to configure ESLint to disable this rule.
 
 ### Defining Rules
 
@@ -134,7 +134,7 @@ npm install babel-eslint --save-dev
 
 - When you save the changes, then, we can see how the error referring to the console is not shown anymore.
 
-- Other example is the rule named [max-lines](http://eslint.org/docs/rules/max-lines). This rule _enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity._ For demo purposes we're going to configure it with a ridiculously low number of lines, that is, just one, so we can see the error.
+- Other example is the rule named [max-lines](http://eslint.org/docs/rules/max-lines). This rule _enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity_. For demo purposes we're going to configure it with a ridiculously low number of lines, that is, just one, so we can see the error.
 
   ./.eslintrc.json
 
@@ -161,4 +161,4 @@ npm install babel-eslint --save-dev
 
 - To "go back to normal" we should remove the rule or configure it to a more reasonable number of lines per file.
 
-- Finally, if we want to integrate eslint with a React based project, we can use [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) that provides linting for JSX language.
+- Finally, if we want to integrate ESLint with a React based project, we can use [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) that provides linting for JSX language.
