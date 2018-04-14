@@ -61,3 +61,56 @@ const sampleNumber = 1;
 </body>
 </html>
 ```
+Once we modified the html file, let's start the project
+```cmd
+npm start
+```
+
+We will see we get an error
+```cmd
+
+> basic@1.0.0 start C:\repos\parcel-by-sample\01 es6
+> rimraf dist && parcel ./src/index.html --open
+
+'rimraf' is not recognized as an internal or external command,
+operable program or batch file.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! basic@1.0.0 start: `rimraf dist && parcel ./src/index.html --open`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the basic@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\maxim_21nujjd\AppData\Roaming\npm-cache\_logs\2018-04-11T04_02_23_917Z-debug.log
+```
+That error is because we don't have installed the rimraf package. Let's install it
+```cmd
+npm install rimraf --save-dev
+```
+Now let's back to start the project
+```cmd
+npm start
+```
+We will see now the project is built correctly
+```cmd
+
+> basic@1.0.0 start C:\repos\parcel-by-sample\01 es6
+> rimraf dist && parcel ./src/index.html --open
+
+Server running at http://localhost:1234
+√  Built in 6.03s.
+```
+Finally, we could check the built files, like html file, we will see parcel added the css dependency in the built file
+```diff
+<html>
++<link rel="stylesheet" href="/src.fec37933.css"><body>
+  <script src="/src.fec37933.js"></script>
+  <h1>Check the console log</h1>
+    <div class="red-background">
+      RedBackground stuff
+    </div> 
+</body>
+</html>
+```

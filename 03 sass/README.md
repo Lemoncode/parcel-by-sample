@@ -1,6 +1,6 @@
 # SASS
 
-Let's see how to add SASS support
+Let's see how to add [SASS](https://sass-lang.com/) support
 
 # Steps to build it
 
