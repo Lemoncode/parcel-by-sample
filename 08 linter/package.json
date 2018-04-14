@@ -12,8 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
     "parcel-bundler": "^1.7.0",
-    "rimraf": "^2.6.2"
-  },
-  "keywords": []
+    "parcel-plugin-eslint": "^1.0.4"
+  }
 }

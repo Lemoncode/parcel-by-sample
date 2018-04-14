@@ -12,10 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.7.0"
+    "parcel-bundler": "^1.7.0",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
   }
 }

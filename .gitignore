@@ -6,8 +6,10 @@ typings/
 .idea/
 */src/**/*.js.map
 **/.vscode/
+**/.cache
 yarn.lock
 *.log
 lib/
 es/
 package-lock.json
+.cache/

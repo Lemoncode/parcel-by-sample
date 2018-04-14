@@ -1,7 +1,6 @@
 # Basic sample
 
-Let's start with a very basic sample, just add an html plus a simple console log (E5), what you can find in the 
-getting started tutorial.
+Let's start with a very basic sample, just add an html plus a simple console log (E5), what you can find in the getting started tutorial.
 
 # Steps to build it
 
@@ -16,15 +15,14 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 - Navigate to the folder where you are going to create the empty project.
 
 - Execute `npm init`, you will be prompted to answer some information request
-about the project (once you have successfully fullfilled them a **`package.json`**
+about the project (once you have successfully fullfilled them a **[package.json](./package.json)**
 file we will generated).
 
 ```bash
 npm init -y
 ```
 
-> Ensure your parent folder does not include spaces or uppercase (if that's the case you can just run _npm init_ and change
-the project name).
+> Ensure your parent folder does not include spaces or uppercase (if that's the case you can just run `npm init` and change the project name).
 
 - Let's install parcel 
 
@@ -32,18 +30,16 @@ the project name).
 npm install parcel-bundler --save-dev
 ```
 
-- Let's create a basic index js file (es5 friendly):
+- Let's create a basic [/src/index.js](./src/index.js) file (es5 friendly):
 
-_./src/index.js_
-
+_[/src/index.js](./src/index.js)_
 ```javascript
 console.log("hello parcel!");
 ```
 
-- Let's create a dummy index.html file
+- Let's create a dummy [/src/index.html](./src/index.html) file
 
-_./src/index.html_
-
+_[/src/index.html](./src/index.html)_
 ```html
 <html>
 <body>
@@ -53,10 +49,9 @@ _./src/index.html_
 </html>
 ```
 
-- Now let's add the following command tu our package.json
+- Now let's add the following command to our [package.json](./package.json)
 
-_package.json_
-
+_[package.json](./package.json)_
 ```diff
   "scripts": {
 +   "build": "parcel ./src/index.html",  
@@ -70,13 +65,12 @@ _package.json_
 npm run build
 ```
 
-> A new folder will be generated _dist_ containing the bundled solution.
+> A new folder will be generated _[/dist](./dist)_ containing the bundled solution.
 
 - What if we need a production ready version? let's add the following command
-in our package.json:
+in our [package.json](./package.json):
 
-_./package.json_
-
+_[package.json](./package.json)_
 ```diff
   "scripts": {
     "build": "parcel ./src/index.html",  
@@ -91,17 +85,16 @@ _./package.json_
 npm run build:prod
 ```
 
-- There's a gotcha old files do not get erased, let's add the rim-raf plugin to ensure we are 
-clearing up _dist_ folder before we generate the bundle.
+- There's a gotcha old files do not get erased, let's add the **rim-raf** plugin to ensure we are 
+clearing up _[/dist](./dist)_ folder before we generate the bundle.
 
 ```bash
-npm install rim-raf --save-dev
+npm install rimraf --save-dev
 ```
 
 - Let's add an extra step to the build process:
 
-_package.json_
-
+_[package.json](./package.json)_
 ```diff
   "scripts": {
 -    "build": "parcel ./src/index.html", 
@@ -112,10 +105,9 @@ _package.json_
   },
 ```
 
-- Le't s run a lite web browser and check results:
+- We added our **script** to launch our application, **start**, inside [package.json](./package.json):
 
-_package.json_
-
+_[package.json](./package.json)_
 ```diff
   "scripts": {
     "build": "rimraf dist && parcel ./src/index.html", 
@@ -125,3 +117,4 @@ _package.json_
   },
 ```
 
+Now we launch the command `npm run start` in the console and verify the results.

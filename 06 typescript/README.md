@@ -1,6 +1,6 @@
 # Basic sample
 
-It's time to test how gastby behaves when using Typescript.
+It's time to test how parcel behaves when using Typescript.
 
 # Steps to build it
 
@@ -20,12 +20,13 @@ npm install
 
 - Let's install _tyescript_
 
-```
+```cmd
 npm install typescript --save-dev
-
-- Let's configure the _.tsconfig_ file.
-
 ```
+
+- Let's configure the _tsconfig.json_ file.
+
+```json
 {
   "compilerOptions": {
     "target": "es6",
@@ -83,9 +84,9 @@ and we won't get a transpile error, that's a known bug:
 
 https://github.com/parcel-bundler/parcel/issues/465
 
-- We need to sintall a plugin to fix this.
+- We need to intall a plugin to fix this.
 
-```
+```cmd
 npm install parcel-plugin-typescript --save-dev
 ```
 
@@ -114,9 +115,3 @@ npm install parcel-plugin-typescript --save-dev
   ]
 }
 ```
-
-
-
-
-
-
