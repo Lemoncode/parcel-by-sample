@@ -1,9 +1,8 @@
 # Import bootstrap
 
-In this demo we will install and configure parcel to import the well known
-[Bootstrap](https://getbootstrap.com/) CSS library.
+In this demo we install and configure parcel to import the well known [Bootstrap](https://getbootstrap.com/) CSS library.
 
-We will start from sample _03 SASS_.
+We start from sample _03 SASS_.
 
 # Steps to build it
 
@@ -15,7 +14,7 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _03 SASS_, just copy the project and execute _npm install_
+- We start from _03 SASS_. Just copy the project and execute _npm install_
 
 ```cmd
 npm install
@@ -27,7 +26,7 @@ npm install
 npm install bootstrap --save
 ```
 
-- Let's update our html including a link to bootstrap.
+- Let's update our HTML to include a link to bootstrap.
 
 ```diff
 <html>
@@ -58,7 +57,7 @@ npm install bootstrap --save
 </html>
 ```
 
-- Let's start the project and check that we got bootstrap styles.
+- Let's start the project and verify Bootstrap styles work properly.
 
 ```
 npm start
