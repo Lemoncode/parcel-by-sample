@@ -21,7 +21,7 @@ It's time to test how parcel behaves when using ES6. Does it transpile it to ES5
 
 ## 02 Custom CSS
 
-Let's get started with working with styles.
+Let's start working with styles.
 
 In this demo will create a custom CSS file (it contains a simple css class that changes a background color to red).
 
