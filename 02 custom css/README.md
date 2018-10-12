@@ -38,7 +38,7 @@ _./src/mystyles.css_
 
 - We import the css to our index.js file:
 
-__./src/index.js_
+_./src/index.js_
 
 ```diff
 + import './mystyles.css';
@@ -47,7 +47,7 @@ const sampleNumber = 1;
 console.log(`Hello from sample ${sampleNumber}`);
 ```
 
-- And now we can just use this style directly in our HTML file (so far so good, if we run this project now we won't see this style applied, because first we have to go through some webpack configuration). Let's update `index.html`.
+- And now we can just use this style directly in our HTML file. Let's update `index.html`.
 
 _./src/index.html_
 
@@ -70,7 +70,6 @@ npm start
 ```
 
 - Finally, we could check the built files. For example, in the html built file, we see that Parcel has added the css dependency:
-
 
 _./dist/index.html_
 ```diff
