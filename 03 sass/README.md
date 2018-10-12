@@ -14,17 +14,11 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 - We start from _02 custom css_. Just copy the project and execute _npm install_
 
-```cmd
+```bash
 npm install
 ```
 
-- We need to install node-sass
-
-```bash
-npm instal node-sass --save-dev
-```
-
-> We could skip this step and let parcel detect it automatically when we are running the build. It will automatically install it.
+- Let's to replace css by sass files and delegate to Parcel installing dependencies.
 
 - Now let's rename _mystyles.css_ to _mystyles.scss_ and update the content.
 
@@ -51,11 +45,14 @@ const sampleNumber = 1;
 console.log(`Hello from sample ${sampleNumber}`);
 ```
 
-- Let's run the sample.
+- Run sample:
 
 ```bash
 npm start
 ```
 
+- If Parcel could not install it, we need to install sass:
 
-
+```bash
+npm install sass --save-dev
+```
