@@ -64,9 +64,9 @@ _index.html_
 ```diff
 <html>
 <body>
--  <script src="./index.js"></script>
-+  <script src="./index.ts"></script>
   <h1>Check the console log</h1>
+- <script src="./index.js"></script>
++ <script src="./index.ts"></script>
 </body>
 </html>
 ```
