@@ -54,5 +54,5 @@ npm start
 - Si Parcel no puede instalarlo, necesitamos instalar sass:
 
 ```bash
-npm instal sass --save-dev
+npm install sass --save-dev
 ```
