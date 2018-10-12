@@ -18,13 +18,7 @@ Instale [Node.js y npm](https://nodejs.org/en/) (min v8.9) si aún no está inst
 npm install
 ```
 
-- Tendremos que instalar `node-sass`
-
-```bash
-npm instal node-sass --save-dev
-```
-
-> Podríamos omitir este paso y dejar que parcel lo detecte automáticamente cuando estemos ejecutando la compilación (build). Lo instalaría a continuación.
+- Vamos a reemplazar los ficheros css por sass y delegar en Parcel la instalación de las dependencias.
 
 - Ahora cambiemos el nombre de _mystyles.css_ a _mystyles.scss_ y actualicemos el contenido.
 
@@ -39,7 +33,7 @@ _mystyles.scss_
 }
 ```
 
-- Ahora actualicemos _index.js_ para señalar el archivo sass.
+- Ahora actualicemos _index.js_ para cambiar la extensión por sass.
 
 _index.js_
 
@@ -55,4 +49,10 @@ console.log(`Hello from sample ${sampleNumber}`);
 
 ```bash
 npm start
+```
+
+- Si Parcel no puede instalarlo, necesitamos instalar sass:
+
+```bash
+npm instal sass --save-dev
 ```

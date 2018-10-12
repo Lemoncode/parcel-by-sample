@@ -14,8 +14,5 @@
     "node-sass": "^4.8.3",
     "parcel-bundler": "^1.7.0",
     "rimraf": "^2.6.2"
-  },
-  "dependencies": {
-    "bootstrap": "^4.0.0"
   }
 }
