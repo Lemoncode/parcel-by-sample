@@ -14,7 +14,7 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 - We start from _00 basic_, just copy the project and execute _npm install_
 
-```cmd
+```bash
 npm install
 ```
 
