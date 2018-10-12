@@ -12,20 +12,19 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _02 custom css_, just copy the project and execute _npm install_
+- We start from _02 custom css_. Just copy the project and execute _npm install_
 
 ```cmd
 npm install
 ```
 
-- We will need to install node-sass
+- We need to install node-sass
 
 ```bash
 npm instal node-sass --save-dev
 ```
 
-> We could skip this step and let parcel detect it automatically when we are running the build
-it will automatically install it.
+> We could skip this step and let parcel detect it automatically when we are running the build. It will automatically install it.
 
 - Now let's rename _mystyles.css_ to _mystyles.scss_ and update the content.
 
