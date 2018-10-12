@@ -54,10 +54,11 @@ _[/src/index.html](./src/index.html)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-+   "build": "parcel ./src/index.html",  
-    "test": "echo \"Error: no test specified\" && exit 1"
++   "build": "parcel ./src/index.html"
+-   "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
+
 
 - Vamos a ejecutar el **build**.
 
@@ -73,9 +74,9 @@ en nuestro [package.json](./package.json):
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-    "build": "parcel ./src/index.html",  
-+    "build:prod": "parcel build ./src/index.html ",      
-    "test": "echo \"Error: no test specified\" && exit 1"
+-   "build": "parcel ./src/index.html"
++   "build": "parcel ./src/index.html",
++   "build:prod": "parcel build ./src/index.html"
   },
 ```
 
@@ -97,11 +98,10 @@ npm install rimraf --save-dev
 _[package.json](./package.json)_
 ```diff
   "scripts": {
--    "build": "parcel ./src/index.html", 
-+    "build": "rimraf dist && parcel ./src/index.html", 
--    "build:prod": "parcel build ./src/index.html",           
-+    "build:prod": "rimraf dist && parcel build ./src/index.html",           
-    "test": "echo \"Error: no test specified\" && exit 1"
+-   "build": "parcel ./src/index.html",
++   "build": "rimraf dist && parcel ./src/index.html",
+-   "build:prod": "parcel build ./src/index.html"
++   "build:prod": "rimraf dist && parcel build ./src/index.html"
   },
 ```
 
@@ -110,10 +110,10 @@ _[package.json](./package.json)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-    "build": "rimraf dist && parcel ./src/index.html", 
-    "build:prod": "rimraf dist && parcel build ./src/index.html",           
-+   "start": "rimraf dist && parcel ./src/index.html --open", 
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && parcel ./src/index.html",
+-   "build:prod": "rimraf dist && parcel build ./src/index.html"
++   "build:prod": "rimraf dist && parcel build ./src/index.html",
++   "start": "rimraf dist && parcel ./src/index.html --open"
   },
 ```
 
