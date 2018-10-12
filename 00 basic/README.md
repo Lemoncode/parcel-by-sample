@@ -1,6 +1,6 @@
 # Basic sample
 
-Let's start with a very basic sample, just add an html plus a simple console log (E5), what you can find in the getting started tutorial.
+Let's start with a very basic sample, just add an html plus a simple console log (E5). This is what you can find in the getting started tutorial.
 
 # Steps to build it
 
@@ -14,15 +14,13 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 - Navigate to the folder where you are going to create the empty project.
 
-- Execute `npm init`, you will be prompted to answer some information request
-about the project (once you have successfully fullfilled them a **[package.json](./package.json)**
-file we will generated).
+- Execute `npm init`, you will be prompted to answer some questions about the project. Once you have successfully answered, a **[package.json](./package.json)** file we will generated.
 
 ```bash
 npm init -y
 ```
 
-> Ensure your parent folder does not include spaces or uppercase (if that's the case you can just run `npm init` and change the project name).
+> Ensure your parent folder does not include any space or uppercase (if that's the case you can just run `npm init` and change the project name).
 
 - Let's install parcel 
 
@@ -43,8 +41,8 @@ _[/src/index.html](./src/index.html)_
 ```html
 <html>
 <body>
-  <script src="./index.js"></script>
   <h1>Check the console log</h1>
+  <script src="./index.js"></script>
 </body>
 </html>
 ```
@@ -54,8 +52,8 @@ _[/src/index.html](./src/index.html)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-+   "build": "parcel ./src/index.html",  
-    "test": "echo \"Error: no test specified\" && exit 1"
++   "build": "parcel ./src/index.html"
+-   "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
 
@@ -65,23 +63,22 @@ _[package.json](./package.json)_
 npm run build
 ```
 
-> A new folder will be generated _[/dist](./dist)_ containing the bundled solution.
+> A new folder, _[/dist](./dist)_, is generated. It contains the bundled solution.
 
-- What if we need a production ready version? let's add the following command
-in our [package.json](./package.json):
+- What if we need a production ready version? let's add the following command in our [package.json](./package.json):
 
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-    "build": "parcel ./src/index.html",  
-+    "build:prod": "parcel build ./src/index.html ",      
-    "test": "echo \"Error: no test specified\" && exit 1"
+-   "build": "parcel ./src/index.html"
++   "build": "parcel ./src/index.html",
++   "build:prod": "parcel build ./src/index.html"
   },
 ```
 
-- Now if you run the command you will get a minified a version plus _NODE_ENV=production_
+- When you run the build command you get a minified a version plus _NODE_ENV=production_
 
-```diff
+```bash
 npm run build:prod
 ```
 
@@ -97,11 +94,10 @@ npm install rimraf --save-dev
 _[package.json](./package.json)_
 ```diff
   "scripts": {
--    "build": "parcel ./src/index.html", 
-+    "build": "rimraf dist && parcel ./src/index.html", 
--    "build:prod": "parcel build ./src/index.html",           
-+    "build:prod": "rimraf dist && parcel build ./src/index.html",           
-    "test": "echo \"Error: no test specified\" && exit 1"
+-   "build": "parcel ./src/index.html",
++   "build": "rimraf dist && parcel ./src/index.html",
+-   "build:prod": "parcel build ./src/index.html"
++   "build:prod": "rimraf dist && parcel build ./src/index.html"
   },
 ```
 
@@ -110,11 +106,11 @@ _[package.json](./package.json)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-    "build": "rimraf dist && parcel ./src/index.html", 
-    "build:prod": "rimraf dist && parcel build ./src/index.html",           
-+   "start": "rimraf dist && parcel ./src/index.html --open", 
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && parcel ./src/index.html",
+-   "build:prod": "rimraf dist && parcel build ./src/index.html"
++   "build:prod": "rimraf dist && parcel build ./src/index.html",
++   "start": "rimraf dist && parcel ./src/index.html --open"
   },
 ```
 
-Now we launch the command `npm run start` in the console and verify the results.
+Now we launch the command `npm start` in the console and verify the results.

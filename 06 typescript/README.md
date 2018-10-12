@@ -12,7 +12,7 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _02 es6_, just copy the project and execute _npm install_
+- We start from _02 es6_. Just copy the project and execute _npm install_
 
 ```cmd
 npm install
@@ -24,7 +24,7 @@ npm install
 npm install typescript --save-dev
 ```
 
-- Let's configure the _tsconfig.json_ file.
+- Let's add and configure the _tsconfig.json_ file.
 
 ```json
 {
@@ -48,7 +48,7 @@ npm install typescript --save-dev
 
 - Let's rename _index.js_ to _index.ts_
 
-- let's update our _index.ts_ to use some typescript feature.
+- let's update our _index.ts_ to use some TypeScript features.
 
 ```diff
 - const sampleNumber = 1;
@@ -57,7 +57,7 @@ npm install typescript --save-dev
 console.log(`Hello from sample ${sampleNumber}`);
 ```
 
-- Let's update our index.html to target to index.ts
+- Let's update our index.html to use index.ts instead of index.js
 
 _index.html_
 
@@ -77,10 +77,10 @@ _index.html_
 npm start
 ```
 
-> Before running parcel we could install _typescript_ if not parcel we will install it for us
+> Before running parcel we could install _typescript_. However, Parcel will install it for us if it is not already installed.
 
-- If we check the dist folder we can find the transpiled code, if we change now the type of _sampleNumber_ to _string_
-and we won't get a transpile error, that's a known bug:
+- If we check the dist folder we can find the transpiled code. If we now change the type of _sampleNumber_ to _string_
+and we don't get a build error, it's because of a known bug:
 
 https://github.com/parcel-bundler/parcel/issues/465
 

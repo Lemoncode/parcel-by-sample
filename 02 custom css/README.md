@@ -1,16 +1,14 @@
 # Custom CSS
 
-Let's get started working with styles.
+Let's start working with styles.
 
-In this demo will create a custom CSS file (it will contain a simple css class
-that will setup a background color to red).
+In this demo we create a custom CSS file which contains a simple css class to set the background color to red.
 
-We will start from sample _01 es6_.
+We start from sample _01 es6_.
 
 Summary steps:
  - Create a custom css file.
  - Use it in our main page.
-
 
 # Steps to build it
 
@@ -22,13 +20,13 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _01 es6_, just copy the project and execute _npm install_
+- We start from _01 es6_. Just copy the project and execute _npm install_
 
 ```cmd
 npm install
 ```
 
-- Let's create a file that we will call _mystyles.css_
+- Let's create the file _mystyles.css_
 
 _./src/mystyles.css_
 
@@ -38,7 +36,7 @@ _./src/mystyles.css_
 }
 ```
 
-- We can just import the css in our index.js file:
+- We import the css to our index.js file:
 
 __./src/index.js_
 
@@ -48,16 +46,16 @@ __./src/index.js_
 const sampleNumber = 1;
 ```
 
-- And now we can just use this style directly in our HTML file (so far so good, if we run this project now we won't see this styles applied, we have to go through some webpack configuration), let's update `index.html`.
+- And now we can just use this style directly in our HTML file (so far so good, if we run this project now we won't see this style applied, because first we have to go through some webpack configuration). Let's update `index.html`.
 
 ```diff
 <html>
 <body>
-  <script src="./index.js"></script>
   <h1>Check the console log</h1>
 + <div class="red-background">
 +  RedBackground stuff
 + </div>  
+  <script src="./index.js"></script>
 </body>
 </html>
 ```
@@ -66,7 +64,7 @@ Once we modified the html file, let's start the project
 npm start
 ```
 
-We will see we get an error
+We see we get an error
 ```cmd
 
 > basic@1.0.0 start C:\repos\parcel-by-sample\01 es6
@@ -93,7 +91,7 @@ Now let's back to start the project
 ```cmd
 npm start
 ```
-We will see now the project is built correctly
+We see now the project builds correctly
 ```cmd
 
 > basic@1.0.0 start C:\repos\parcel-by-sample\01 es6
@@ -102,15 +100,17 @@ We will see now the project is built correctly
 Server running at http://localhost:1234
 √  Built in 6.03s.
 ```
-Finally, we could check the built files, like html file, we will see parcel added the css dependency in the built file
+Finally, we could check the built files. For example, in the html built file, we see that Parcel has added the css dependency:
+
 ```diff
 <html>
 +<link rel="stylesheet" href="/src.fec37933.css"><body>
-  <script src="/src.fec37933.js"></script>
+  
   <h1>Check the console log</h1>
     <div class="red-background">
       RedBackground stuff
     </div> 
+    <script src="/src.fec37933.js"></script>
 </body>
 </html>
 ```
