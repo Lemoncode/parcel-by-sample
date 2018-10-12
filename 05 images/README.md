@@ -2,7 +2,7 @@
 
 In this demo we are going to include images in our project in two flavours: via JavaScript and via HTML.
 
-We will start from sample _04 Bootstrap_.
+We start from sample _04 Bootstrap_.
 
 # Steps to build it
 
@@ -14,12 +14,12 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _04 Bootstrap_, just copy the project and execute _npm install_
+- We start from _04 Bootstrap_. Just copy the project and execute _npm install_
 
 ```cmd
 npm install
 ```
-- We will continue by creating a folder named **content** inside the **src** folder, and adding two images there: [`logo_1`](./src/content/logo_1.png) and [`logo_2`](./src/content/logo_2.png).
+- We continue by creating a folder named **content** inside the **src** folder, and adding two images there: [`logo_1`](./src/content/logo_1.png) and [`logo_2`](./src/content/logo_2.png).
 
 - Let's add a div container to place an image.
 
@@ -32,8 +32,7 @@ _index.html_
   <div class="jumbotron">
 ```
 
-- Let's jump into _`index.js`_ and import [`logo_1`](./src/content/logo_1.png) using JavaScript. 
-Then, let's place it under a `<div>` with a given `id`:
+- Let's jump into _`index.js`_ and import [`logo_1`](./src/content/logo_1.png) using JavaScript. Then, let's place it under a `<div>` with a given `id`:
 
 _index.js_
 
@@ -73,7 +72,7 @@ console.log(`Hello from sample ${sampleNumber}`);
 
 ```
 
-- That's fine but what if we had already the image referenced inside a HTML `<img>` tag? Let's add [`logo_2.png`](./src/content/logo_2.png) into the index.html file:
+- Now, what if we had already the image referenced inside a HTML `<img>` tag? Let's add [`logo_2.png`](./src/content/logo_2.png) into the index.html file:
 
 _index.html_
 
