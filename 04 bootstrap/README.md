@@ -42,7 +42,6 @@ npm install bootstrap --save
 ```diff
 <html>
 <body>
-  <script src="./index.js"></script>
   <h1>Check the console log</h1>
 +    <div class="jumbotron">
 +      <h1>Testing Bootstrap</h1>
@@ -53,6 +52,7 @@ npm install bootstrap --save
   <div class="red-background">
       RedBackground stuff
   </div>  
+  <script src="./index.js"></script>
 </body>
 </html>
 ```

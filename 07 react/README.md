@@ -37,11 +37,10 @@ export const HelloComponent = () => <h2>Hello from React</h2>
 ```diff
 <html>
 <body>
--  <script src="./index.js"></script>
   <h1>Check the console log</h1>
 +  <div id="root">
 +  </div>
-+  <script src="./index.js"></script>
+   <script src="./index.js"></script>
 </body>
 </html>
 ```

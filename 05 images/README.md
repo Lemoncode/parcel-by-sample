@@ -26,7 +26,6 @@ npm install
 _index.html_
 
 ```diff
-  <script src="./index.js"></script>  
   <h1>Check the console log</h1>
 + <div id="imgContainer"></div>  
   <div class="jumbotron">
@@ -55,7 +54,6 @@ console.log(`Hello from sample ${sampleNumber}`);
 <body>
   <link rel="stylesheet" 
      href="../node_modules/bootstrap/dist/css/bootstrap.css">  
-- <script src="./index.js"></script>  
   <h1>Check the console log</h1>
   <div id="imgContainer" style="width:500px;height:300px;"></div>
   <div class="jumbotron">
@@ -67,7 +65,7 @@ console.log(`Hello from sample ${sampleNumber}`);
   <div class="red-background">
     RedBackground stuff
   </div>
-+  <script src="./index.js"></script>  
+  <script src="./index.js"></script>  
 </body>
 
 ```

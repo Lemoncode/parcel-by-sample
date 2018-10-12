@@ -30,7 +30,7 @@ npm install
 
 _./src/mystyles.css_
 
-```
+```css
 .red-background {
  background-color: indianred;
 }
@@ -44,6 +44,7 @@ __./src/index.js_
 + import './mystyles.css';
 
 const sampleNumber = 1;
+console.log(`Hello from sample ${sampleNumber}`);
 ```
 
 - And now we can just use this style directly in our HTML file (so far so good, if we run this project now we won't see this style applied, because first we have to go through some webpack configuration). Let's update `index.html`.
