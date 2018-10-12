@@ -12,13 +12,13 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We will start from _00 basic_, just copy the project and execute _npm install_
+- We start from _00 basic_, just copy the project and execute _npm install_
 
 ```cmd
 npm install
 ```
 
-- Now let's update our sample and use some cool ES6 feature.
+- Now let's update our sample to use a cool ES6 feature.
 
 _./src/index.js_
 

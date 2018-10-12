@@ -41,8 +41,8 @@ _[/src/index.html](./src/index.html)_
 ```html
 <html>
 <body>
-  <script src="./index.js"></script>
   <h1>Check the console log</h1>
+  <script src="./index.js"></script>
 </body>
 </html>
 ```
@@ -52,8 +52,8 @@ _[/src/index.html](./src/index.html)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-+   "build": "parcel ./src/index.html",  
-    "test": "echo \"Error: no test specified\" && exit 1"
++   "build": "parcel ./src/index.html"
+-   "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
 
@@ -70,15 +70,15 @@ npm run build
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-    "build": "parcel ./src/index.html",  
-+    "build:prod": "parcel build ./src/index.html ",      
-    "test": "echo \"Error: no test specified\" && exit 1"
+-   "build": "parcel ./src/index.html"
++   "build": "parcel ./src/index.html",
++   "build:prod": "parcel build ./src/index.html"
   },
 ```
 
 - When you run the build command you get a minified a version plus _NODE_ENV=production_
 
-```diff
+```bash
 npm run build:prod
 ```
 
@@ -94,11 +94,10 @@ npm install rimraf --save-dev
 _[package.json](./package.json)_
 ```diff
   "scripts": {
--    "build": "parcel ./src/index.html", 
-+    "build": "rimraf dist && parcel ./src/index.html", 
--    "build:prod": "parcel build ./src/index.html",           
-+    "build:prod": "rimraf dist && parcel build ./src/index.html",           
-    "test": "echo \"Error: no test specified\" && exit 1"
+-   "build": "parcel ./src/index.html",
++   "build": "rimraf dist && parcel ./src/index.html",
+-   "build:prod": "parcel build ./src/index.html"
++   "build:prod": "rimraf dist && parcel build ./src/index.html"
   },
 ```
 
@@ -107,11 +106,11 @@ _[package.json](./package.json)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-    "build": "rimraf dist && parcel ./src/index.html", 
-    "build:prod": "rimraf dist && parcel build ./src/index.html",           
-+   "start": "rimraf dist && parcel ./src/index.html --open", 
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && parcel ./src/index.html",
+-   "build:prod": "rimraf dist && parcel build ./src/index.html"
++   "build:prod": "rimraf dist && parcel build ./src/index.html",
++   "start": "rimraf dist && parcel ./src/index.html --open"
   },
 ```
 
-Now we launch the command `npm run start` in the console and verify the results.
+Now we launch the command `npm start` in the console and verify the results.
