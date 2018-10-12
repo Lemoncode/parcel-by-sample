@@ -43,8 +43,8 @@ _[/src/index.html](./src/index.html)_
 ```html
 <html>
 <body>
-  <script src="./index.js"></script>
   <h1>Check the console log</h1>
+  <script src="./index.js"></script>
 </body>
 </html>
 ```
