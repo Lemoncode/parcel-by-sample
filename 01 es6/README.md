@@ -14,7 +14,7 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 - We start from _00 basic_, just copy the project and execute _npm install_
 
-```cmd
+```bash
 npm install
 ```
 
@@ -22,25 +22,27 @@ npm install
 
 _./src/index.js_
 
-```javascript
-const sampleNumber = 1;
-console.log(`Hello from sample ${sampleNumber}`);
+```diff
++ const sampleNumber = 1;
+- console.log("hello parcel!");
++ console.log(`Hello from sample ${sampleNumber}`);
 ```
 
-- Now it's time to run a build and check if we got the code already transpiled
+- Now it's time to run a build and check if we got the code already transpiled:
 
 ```bash
 npm run build
 ```
-
 
 - And we got it
 
 _./dist/src.XXXXX.js
 
 ```javascript
-})({2:[function(require,module,exports) {
+...
+})({"index.js":[function(require,module,exports) {
 var sampleNumber = 1;
-console.log("Hello from sample " + sampleNumber);
-},{}],3:[function(require,module,exports) {
+console.log("Hello from sample ".concat(sampleNumber));
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+...
 ```
