@@ -75,7 +75,7 @@ _./src/index.html_
 
 - Let's run the sample and check that we got it working:
 
-```
+```bash
 npm start
 ```
 
