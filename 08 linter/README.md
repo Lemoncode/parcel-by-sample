@@ -30,7 +30,7 @@ npm install eslint --save-dev
 
 - We are going to create a file `.eslintrc.json` (there are many [file formats options](http://eslint.org/docs/user-guide/configuring#configuration-file-formats))
 
-  _./.eslintrc.json_
+_./.eslintrc.json_
 
 ```json
 {

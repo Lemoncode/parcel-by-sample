@@ -72,7 +72,7 @@ npm run build
 npm install babel-eslint --save-dev
 ```
 
-  En el fichero ./.eslintrc.json tenemos que añadir el parseador.
+- En el fichero ./.eslintrc.json tenemos que añadir el parseador.
 
 ```diff
 {
@@ -94,7 +94,7 @@ npm install babel-eslint --save-dev
 
 - Tal como hemos visto, estamos usando [las reglas por defecto de ESLint](http://eslint.org/docs/rules/) que configuramos en el fichero de configuración de ESLint.
 
-  ./.eslintrc.json
+_./.eslintrc.json_
 
 ```json
 {
@@ -113,7 +113,7 @@ npm install babel-eslint --save-dev
 
   - Por lo que para deshabilitar la regla `console` debemos añadir la siguiente configuración:
 
-  ./.eslintrc.json
+_./.eslintrc.json_
 
 ```diff
 {
@@ -136,7 +136,7 @@ npm install babel-eslint --save-dev
 
 - Otro ejemplo es la regla [max-lines](http://eslint.org/docs/rules/max-lines). Esta regla _fuerza un número máximo de líneas por fichero para ayudar al mantenimiento y reducir la complejidad_. Solo para poder mostrar esta regla vamos a configurarla con un número de líneas ridículo, exáctamente 1, para poder ver el error.
 
-  ./.eslintrc.json
+_./.eslintrc.json_
 
 ```diff
 {
