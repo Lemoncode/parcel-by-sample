@@ -16,14 +16,15 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 - We start from _04 Bootstrap_. Just copy the project and execute _npm install_
 
-```cmd
+```bash
 npm install
 ```
+
 - We continue by creating a folder named **content** inside the **src** folder, and adding two images there: [`logo_1`](./src/content/logo_1.png) and [`logo_2`](./src/content/logo_2.png).
 
 - Let's add a div container to place an image.
 
-_index.html_
+_./src/index.html_
 
 ```diff
   <h1>Check the console log</h1>
@@ -33,7 +34,7 @@ _index.html_
 
 - Let's jump into _`index.js`_ and import [`logo_1`](./src/content/logo_1.png) using JavaScript. Then, let's place it under a `<div>` with a given `id`:
 
-_index.js_
+_./src/index.js_
 
 ```diff
 import './mystyles.scss';
@@ -48,36 +49,14 @@ console.log(`Hello from sample ${sampleNumber}`);
 + document.getElementById('imgContainer').appendChild(img);
 ```
 
-- Before moving forward let's place the index.js file at the bottom of the html file (to ensure we got all the dom available).
-
-```diff
-<body>
-  <link rel="stylesheet" 
-     href="../node_modules/bootstrap/dist/css/bootstrap.css">  
-  <h1>Check the console log</h1>
-  <div id="imgContainer" style="width:500px;height:300px;"></div>
-  <div class="jumbotron">
-    <h1>Testing Bootstrap</h1>
-    <p>
-      Bootstrap is the most popular ...
-    </p>
-  </div>
-  <div class="red-background">
-    RedBackground stuff
-  </div>
-  <script src="./index.js"></script>  
-</body>
-
-```
-
 - Now, what if we had already the image referenced inside a HTML `<img>` tag? Let's add [`logo_2.png`](./src/content/logo_2.png) into the index.html file:
 
-_index.html_
+_./src/index.html_
 
 ```diff
   <h1>Check the console log</h1>
   <div id="imgContainer"></div>  
-+ <img src="./content/logo_2.png"/>
++ <img src="./content/logo_2.png" />
   <div class="jumbotron">
 ```
 
@@ -86,3 +65,7 @@ _index.html_
 ```bash
 npm start
 ```
+
+- We could see that parcel resolve the images `src` to be loaded by server:
+
+![images src](../Readme_resources/05_images/00_images_src.png)
