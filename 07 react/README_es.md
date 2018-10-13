@@ -27,6 +27,8 @@ npm install react react-dom --save
 
 - Creamos el componente **HelloComponent** en el fichero [_hello.jsx_](src/hello.jsx) (./src/hello.jsx)
 
+_./src/hello.jsx_
+
 ```javascript
 import React from 'react';
 
@@ -35,6 +37,7 @@ export const HelloComponent = () => <h2>Hello from React</h2>
 
 - Ahora, en el fichero [_index.html_](src/index.html) (./src/index.html) creamos un contenedor div para instanciar nuestra aplicación react. Ademas, cambiamos el orden de importación del script al final del body (así nos aseguramos que el contenedor root está disponible cuando el script se ejecute)
 
+_./src/index.html_
 
 ```diff
 <html>
@@ -48,6 +51,8 @@ export const HelloComponent = () => <h2>Hello from React</h2>
 ```
 
 - Seguidamente creamos el punto de entrada en el fichero [_index.js_](src/index.js) (./src/index.js)
+
+_./src/index.js_
 
 ```diff
 +   import React from 'react';
