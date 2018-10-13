@@ -12,7 +12,7 @@ Instale [Node.js and npm](https://nodejs.org/en/) (min v8.9) si aún no está in
 
 ## Pasos
 
-- Comenzaremos desde _02 es6_, sólo debes copiar el proyecto y ejecutar _npm install_
+- Comenzaremos desde _01 es6_, sólo debes copiar el proyecto y ejecutar _npm install_
 
 ```bash
 npm install
@@ -50,6 +50,8 @@ npm install typescript --save-dev
 
 - Actualicemos _index.ts_ para usar algunas características de Typescript.
 
+_./src/index.ts_
+
 ```diff
 - const sampleNumber = 1;
 + let sampleNumber : number = null;
@@ -59,7 +61,7 @@ console.log(`Hello from sample ${sampleNumber}`);
 
 - Actualicemos nuestro _index.html_ para apuntar a _index.ts_
 
-_index.html_
+_./src/index.html_
 
 ```diff
 <html>
@@ -79,7 +81,19 @@ npm start
 
 > Antes de ejecutar Parcel podríamos instalar _typescript_ si no lo hemos hecho, Parcel lo instalará por nosotros.
 
-- Si revisamos la carpeta _dist_ podemos encontrar el código transpilado, si ahora cambiamos el tipo de _sampleNumber_ a _string_ obtendremos un error de transpilación. Este bug es conocido:
+- Si revisamos la carpeta _dist_ podemos encontrar el código transpilado:
+
+```
+...
+})({"index.ts":[function(require,module,exports) {
+var sampleNumber = null;
+sampleNumber = 6;
+console.log("Hello from sample ".concat(sampleNumber));
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+...
+```
+
+- Si ahora cambiamos el tipo de _sampleNumber_ a _string_ obtendremos un error de transpilación. Este bug es conocido:
 
 https://github.com/parcel-bundler/parcel/issues/465
 
@@ -113,4 +127,10 @@ npm install parcel-plugin-typescript --save-dev
     "node_modules"
   ]
 }
+```
+
+- Ejecutemos el ejemplo otra vez y veremos los errores de compilación:
+
+```bash
+npm start
 ```

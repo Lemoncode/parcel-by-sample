@@ -12,15 +12,15 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 ## Steps
 
-- We start from _02 es6_. Just copy the project and execute _npm install_
+- We start from _01 es6_. Just copy the project and execute _npm install_
 
-```cmd
+```bash
 npm install
 ```
 
 - Let's install _tyescript_
 
-```cmd
+```bash
 npm install typescript --save-dev
 ```
 
@@ -50,6 +50,8 @@ npm install typescript --save-dev
 
 - let's update our _index.ts_ to use some TypeScript features.
 
+_./src/index.ts_
+
 ```diff
 - const sampleNumber = 1;
 + let sampleNumber : number = null;
@@ -59,7 +61,7 @@ console.log(`Hello from sample ${sampleNumber}`);
 
 - Let's update our index.html to use index.ts instead of index.js
 
-_index.html_
+_./src/index.html_
 
 ```diff
 <html>
@@ -73,20 +75,32 @@ _index.html_
 
 - Let's run the sample and check that we got it working:
 
-```
+```bash
 npm start
 ```
 
 > Before running parcel we could install _typescript_. However, Parcel will install it for us if it is not already installed.
 
-- If we check the dist folder we can find the transpiled code. If we now change the type of _sampleNumber_ to _string_
+- If we check the dist folder we can find the transpiled code.
+
+```
+...
+})({"index.ts":[function(require,module,exports) {
+var sampleNumber = null;
+sampleNumber = 6;
+console.log("Hello from sample ".concat(sampleNumber));
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+...
+```
+
+- If we now change the type of _sampleNumber_ to _string_
 and we don't get a build error, it's because of a known bug:
 
 https://github.com/parcel-bundler/parcel/issues/465
 
 - We need to intall a plugin to fix this.
 
-```cmd
+```bash
 npm install parcel-plugin-typescript --save-dev
 ```
 
@@ -114,4 +128,10 @@ npm install parcel-plugin-typescript --save-dev
     "node_modules"
   ]
 }
+```
+
+- Let's run sample again and we will see the build errors:
+
+```bash
+npm start
 ```
