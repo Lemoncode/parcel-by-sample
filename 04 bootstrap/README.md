@@ -30,25 +30,25 @@ npm install bootstrap --save
 
 ```diff
 <html>
-
++ <head>
++     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
++ </head>
 <body>
-+  <link rel="stylesheet" 
-+     href="../node_modules/bootstrap/dist/css/bootstrap.css">
-  <script src="./index.js"></script>  
+  <h1>Check the console log</h1>
 ```
 
 - Let's modify our _index.html_ and include some specific bootstrap component.
 
 ```diff
-<html>
+...
 <body>
   <h1>Check the console log</h1>
-+    <div class="jumbotron">
-+      <h1>Testing Bootstrap</h1>
-+      <p>
-+        Bootstrap is the most popular ...
-+      </p>
-+    </div>    
++ <div class="jumbotron">
++   <h1>Testing Bootstrap</h1>
++   <p>
++     Bootstrap is the most popular ...
++   </p>
++ </div>    
   <div class="red-background">
       RedBackground stuff
   </div>  
