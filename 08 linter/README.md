@@ -28,9 +28,9 @@ npm install eslint --save-dev
 
 - ESLint works with Babel and JSX syntax by installing plugins. That is, it's a great library to develop React projects. This sample is a demo, so we're going to implement just a basic configuration.
 
-  We are going to create a file `.eslintrc.json` (there are many [file formats options](http://eslint.org/docs/user-guide/configuring#configuration-file-formats))
+- We are going to create a file `.eslintrc.json` (there are many [file formats options](http://eslint.org/docs/user-guide/configuring#configuration-file-formats))
 
-  _./.eslintrc.json_
+_./.eslintrc.json_
 
 ```json
 {
@@ -72,7 +72,9 @@ npm run build
 npm install babel-eslint --save-dev
 ```
 
-  In ./.eslintrc.json file we have to add the parser.
+- In ./.eslintrc.json file we have to add the parser.
+
+_./.eslintrc.json_
 
 ```diff
 {
@@ -94,7 +96,7 @@ npm install babel-eslint --save-dev
 
 - As we saw previously, we are using [ESLint default rules](http://eslint.org/docs/rules/), that was set up in the linter configuration file.
 
-  ./.eslintrc.json
+_./.eslintrc.json_
 
 ```json
 {
@@ -113,7 +115,7 @@ npm install babel-eslint --save-dev
 
 - So we can disable `console` rule with the following configuration:
 
-  ./.eslintrc.json
+_./.eslintrc.json_
 
 ```diff
 {
@@ -136,7 +138,7 @@ npm install babel-eslint --save-dev
 
 - Other example is the rule named [max-lines](http://eslint.org/docs/rules/max-lines). This rule _enforces a maximum number of lines per file, in order to aid in maintainability and reduce complexity_. For demo purposes we're going to configure it with a ridiculously low number of lines, that is, just one, so we can see the error.
 
-  ./.eslintrc.json
+_./.eslintrc.json_
 
 ```diff
 {
