@@ -1,6 +1,6 @@
 # Basic sample
 
-Let's check how easy is to integrate jsx in your bundle .
+Let's check how easy is to integrate jsx in your bundle.
 
 # Steps to build it
 
@@ -14,7 +14,7 @@ Install [Node.js and npm](https://nodejs.org/en/) (min v8.9) if they are not alr
 
 - We start from _01 es6_. Just copy the project and execute _npm install_
 
-```cmd
+```bash
 npm install
 ```
 
@@ -26,6 +26,8 @@ npm install react react-dom --save
 
 - Let's create a component called **HelloComponent** in the [_hello.jsx_](src/hello.jsx) file (./src/hello.jsx)
 
+_./src/hello.jsx_
+
 ```javascript
 import React from 'react';
 
@@ -33,6 +35,8 @@ export const HelloComponent = () => <h2>Hello from React</h2>
 ```
 
 - Now let's create in the [_index.html_](src/index.html) file (./src/index.html) a div container to instantiate our react application. Let's move as well the script tag to the bottom of the body (to ensure the div root will be avaible when the script executes).
+
+_./src/index.html_
 
 ```diff
 <html>
@@ -47,10 +51,12 @@ export const HelloComponent = () => <h2>Hello from React</h2>
 
 - Let's create the entry point in the [_index.js_](src/index.js) file (./src/index.js)
 
+_./src/index.js_
+
 ```diff
 +   import React from 'react';
 +   import ReactDOM from 'react-dom';
-+   import {HelloComponent} from './hello.jsx';
++   import { HelloComponent } from './hello.jsx';
 
 +   ReactDOM.render(
 +     <HelloComponent />,
@@ -63,7 +69,7 @@ export const HelloComponent = () => <h2>Hello from React</h2>
 
 - Let's run the sample.
 
-```
+```bash
 npm start
 ```
 
