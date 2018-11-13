@@ -36,7 +36,7 @@ Let's see how to add SASS support.
 
 ## 04 Bootstrap
 
-In this demo we install and configure webpack to import the well known [Bootstrap](https://getbootstrap.com/) CSS library.
+In this demo we install and configure parcel to import the well known [Bootstrap](https://getbootstrap.com/) CSS library.
 
 [Link to step by step sample guide](https://github.com/Lemoncode/parcel-by-sample/tree/master/04%20bootstrap)
 
