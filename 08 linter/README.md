@@ -169,7 +169,7 @@ _./.eslintrc.json_
 {
   "extends": [
     "eslint:recommended",
-    "eslint-plugin-react"
+    "plugin:react/recommended"
   ],
   "env": {
     "browser": true,
