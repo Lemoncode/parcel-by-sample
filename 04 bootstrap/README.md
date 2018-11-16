@@ -1,6 +1,6 @@
 # Import bootstrap
 
-In this demo we install and configure parcel to import the well known [Bootstrap](https://getbootstrap.com/) CSS library.
+In this demo we will install and configure parcel to import the well known [Bootstrap](https://getbootstrap.com/) CSS library.
 
 We start from sample _03 SASS_.
 
