@@ -98,7 +98,11 @@ and we don't get a build error, it's because of a known bug:
 
 https://github.com/parcel-bundler/parcel/issues/465
 
-- We need to intall a plugin to fix this.
+- We need to install a plugin to fix this.
+
+> Known bug: parcel-plugin-typescript does not support parcel@1.10 you will have to downgrade to 
+1.9.4 to see it working, issue: https://github.com/fathyb/parcel-plugin-typescript/issues/59
+
 
 ```bash
 npm install parcel-plugin-typescript --save-dev
