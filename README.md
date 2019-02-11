@@ -62,9 +62,12 @@ Let's check how easy it is to integrate jsx to your bundle.
 [Link to step by step sample guide](https://github.com/Lemoncode/parcel-by-sample/tree/master/07%20react)
 
 
-# About Lemoncode
+# About Basefactor + Lemoncode
 
-We are a team of long-term experienced freelance developers, established as a group in 2010.
-We specialize in Front End technologies and .NET. [Click here](http://lemoncode.net/services/en/#en-home) to get more info about us.
+We are an innovating team of Javascript experts, passionate about turning your ideas into robust products.
+
+[Basefactor, consultancy by Lemoncode](http://www.basefactor.com) provides consultancy and coaching services.
+
+[Lemoncode](http://lemoncode.net/services/en/#en-home) provides training services.
 
 For the LATAM/Spanish audience we are running an Online Front End Master degree, more info: http://lemoncode.net/master-frontend
