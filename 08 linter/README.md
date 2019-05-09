@@ -163,4 +163,18 @@ _./.eslintrc.json_
 
 - To "go back to normal" we should remove the rule or configure it to a more reasonable number of lines per file.
 
-- Finally, if we want to integrate ESLint with a React based project, we can use [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) that provides linting for JSX language.
+- Finally, if we want to integrate ESLint with a React based project, we can use [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) that provides linting for JSX language. And update the _.eslintrc.json_ file:
+
+```json
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint"
+}
+```
