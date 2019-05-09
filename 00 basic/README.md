@@ -52,7 +52,7 @@ _[/src/index.html](./src/index.html)_
 _[package.json](./package.json)_
 ```diff
   "scripts": {
-+   "build": "parcel ./src/index.html"
++   "build": "parcel ./src/index.html",
 -   "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
