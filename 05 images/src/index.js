@@ -6,4 +6,5 @@ console.log(`Hello from sample ${sampleNumber}`);
 
 const img = document.createElement('img');
 img.src = logoImg;
+
 document.getElementById('imgContainer').appendChild(img);

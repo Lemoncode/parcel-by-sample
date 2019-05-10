@@ -68,4 +68,3 @@ npm start
 
 - We could see that parcel resolve the images `src` to be loaded by server:
 
-![images src](../Readme_resources/05_images/00_images_src.png)
