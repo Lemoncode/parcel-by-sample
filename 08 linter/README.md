@@ -1,8 +1,10 @@
 # Linting
 
-Parcel by default doesn't offer an integration with eslint or tslint, you have to do it via plugins.
+Parcel by default doesn't offer an integration with eslint or tslint, you have to do it via plugins (https://github.com/parcel-bundler/parcel/issues/64)
 
 There is a plugin ([parcel-plugin-eslint](https://github.com/BoltDoggy/parcel-plugin-eslint)) available but is at _experimental stage_. We will check how to use it, but at the time of this writing is not recommeded to use this outside of a lab enviroment.
+
+_Stability: 1 - Experimental This feature is still under active development and subject to non-backwards compatible changes, or even removal, in any future version. Use of the feature is not recommended in production environments._
 
 ## Steps to build it
 
