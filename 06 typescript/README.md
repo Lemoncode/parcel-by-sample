@@ -101,8 +101,9 @@ https://github.com/parcel-bundler/parcel/issues/465
 - We need to install a plugin to fix this.
 
 > Known bug: parcel-plugin-typescript does not support parcel@1.10 you will have to downgrade to 
-1.9.4 to see it working, issue: https://github.com/fathyb/parcel-plugin-typescript/issues/59
+1.9.4 to see it working, issue: https://github.com/fathyb/parcel-plugin-typescript/issues/59 and this open request: https://github.com/parcel-bundler/parcel/issues/1378
 
+> Note down this plugin is buggy and abandoned and doesn't work with 
 
 ```bash
 npm install parcel-plugin-typescript --save-dev
@@ -134,8 +135,11 @@ npm install parcel-plugin-typescript --save-dev
 }
 ```
 
-- Let's run sample again and we will see the build errors:
+- Unfortunately if we run the sample we can see that the plugin
+is throwing the wrong error:
 
 ```bash
 npm start
 ```
+
+> The parcel team is working on enhancing Typescript support on version 2.0
