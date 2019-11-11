@@ -28,6 +28,8 @@ npm install bootstrap --save
 
 - Let's update our HTML to include a link to bootstrap.
 
+_./srsc/index.html_
+
 ```diff
 <html>
 + <head>
@@ -48,10 +50,10 @@ npm install bootstrap --save
 +   <p>
 +     Bootstrap is the most popular ...
 +   </p>
-+ </div>    
++ </div>
   <div class="red-background">
       RedBackground stuff
-  </div>  
+  </div>
   <script src="./index.js"></script>
 </body>
 </html>
