@@ -22,7 +22,7 @@ npm init -y
 
 > Ensure your parent folder does not include any space or uppercase (if that's the case you can just run `npm init` and change the project name).
 
-- Let's install parcel 
+- Let's install parcel
 
 ```bash
 npm install parcel-bundler --save-dev
@@ -31,6 +31,7 @@ npm install parcel-bundler --save-dev
 - Let's create a basic [/src/index.js](./src/index.js) file (es5 friendly):
 
 _[/src/index.js](./src/index.js)_
+
 ```javascript
 console.log("hello parcel!");
 ```
@@ -38,21 +39,23 @@ console.log("hello parcel!");
 - Let's create a dummy [/src/index.html](./src/index.html) file
 
 _[/src/index.html](./src/index.html)_
+
 ```html
 <html>
-<body>
-  <h1>Check the console log</h1>
-  <script src="./index.js"></script>
-</body>
+  <body>
+    <h1>Check the console log</h1>
+    <script src="./index.js"></script>
+  </body>
 </html>
 ```
 
 - Now let's add the following command to our [package.json](./package.json)
 
 _[package.json](./package.json)_
+
 ```diff
   "scripts": {
-+   "build": "parcel ./src/index.html",
++   "build": "parcel ./src/index.html"
 -   "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
@@ -68,6 +71,7 @@ npm run build
 - What if we need a production ready version? let's add the following command in our [package.json](./package.json):
 
 _[package.json](./package.json)_
+
 ```diff
   "scripts": {
 -   "build": "parcel ./src/index.html"
@@ -82,8 +86,8 @@ _[package.json](./package.json)_
 npm run build:prod
 ```
 
-- There's a gotcha old files do not get erased, let's add the **rim-raf** plugin to ensure we are 
-clearing up _[/dist](./dist)_ folder before we generate the bundle.
+- There's a gotcha old files do not get erased, let's add the **rim-raf** plugin to ensure we are
+  clearing up _[/dist](./dist)_ folder before we generate the bundle.
 
 ```bash
 npm install rimraf --save-dev
@@ -92,6 +96,7 @@ npm install rimraf --save-dev
 - Let's add an extra step to the build process:
 
 _[package.json](./package.json)_
+
 ```diff
   "scripts": {
 -   "build": "parcel ./src/index.html",
@@ -104,6 +109,7 @@ _[package.json](./package.json)_
 - We added our **script** to launch our application, **start**, inside [package.json](./package.json):
 
 _[package.json](./package.json)_
+
 ```diff
   "scripts": {
     "build": "rimraf dist && parcel ./src/index.html",
