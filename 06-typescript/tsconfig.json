@@ -10,10 +10,6 @@
     "noLib": false,
     "suppressImplicitAnyIndexErrors": true
   },
-  "parcelTsPluginOptions": {
-    // If true type-checking is disabled
-    "transpileOnly": false
-  },
   "compileOnSave": false,
   "exclude": ["node_modules"]
 }

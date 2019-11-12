@@ -40,9 +40,7 @@ npm install typescript --save-dev
     "suppressImplicitAnyIndexErrors": true
   },
   "compileOnSave": false,
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
 ```
 
@@ -94,16 +92,43 @@ console.log("Hello from sample ".concat(sampleNumber));
 ```
 
 - If we now change the type of _sampleNumber_ to _string_
-and we don't get a build error, it's because of a known bug:
+  and we don't get a build error, it's by design :-@:
 
-https://github.com/parcel-bundler/parcel/issues/465
+https://github.com/parcel-bundler/parcel/issues/2911
+
+-We have two options here:
+
+- Add a previous step (tsc) outside form parcel.
+- Use a plugin (this is documented in the Readme.md but is brokenw with current parcel version)
+
+** Approach A: Adding a tsc extra step**
+
+- Open your package.json and let's add an extra step to our start and build process:
+
+_package.json_
+
+```diff
+  "scripts": {
+-    "build": "rimraf dist && parcel ./src/index.html",
+-    "build:prod": "rimraf dist && parcel build ./src/index.html",
+-    "start": "rimraf dist && parcel ./src/index.html --open"
++    "build": "tsc --noEmit && rimraf dist && parcel ./src/index.html",
++    "build:prod": "tsc --noEmit && rimraf dist && parcel build ./src/index.html",
++    "start": "tsc --noEmit && rimraf dist && parcel ./src/index.html --open"
+
+  },
+```
+
+> This workaround is not optimal, other powerful bundlers let run this check in parallel.
+
+** Approach B. Plugin: This plugin approach does not work on current Parcel Version\***
 
 - We need to install a plugin to fix this.
 
-> Known bug: parcel-plugin-typescript does not support parcel@1.10 you will have to downgrade to 
-1.9.4 to see it working, issue: https://github.com/fathyb/parcel-plugin-typescript/issues/59 and this open request: https://github.com/parcel-bundler/parcel/issues/1378
+> Known bug: parcel-plugin-typescript does not support parcel@1.10 you will have to downgrade to
+> 1.9.4 to see it working, issue: https://github.com/fathyb/parcel-plugin-typescript/issues/59 and this open request: https://github.com/parcel-bundler/parcel/issues/1378
 
-> Note down this plugin is buggy and abandoned and doesn't work with 
+> Note down this plugin is buggy and abandoned and doesn't work with
 
 ```bash
 npm install parcel-plugin-typescript --save-dev
@@ -127,7 +152,7 @@ npm install parcel-plugin-typescript --save-dev
 +  "parcelTsPluginOptions": {
 +    // If true type-checking is disabled
 +    "transpileOnly": false
-+  },  
++  },
   "compileOnSave": false,
   "exclude": [
     "node_modules"
@@ -136,7 +161,7 @@ npm install parcel-plugin-typescript --save-dev
 ```
 
 - Unfortunately if we run the sample we can see that the plugin
-is throwing the wrong error:
+  is throwing the wrong error:
 
 ```bash
 npm start
